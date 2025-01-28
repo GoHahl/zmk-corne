@@ -1,9 +1,12 @@
 #include <behaviors/mouse_keys.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
@@ -50,11 +53,40 @@
         tap-ms = <30>;
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        Enter {
+            bindings = <&kp ENTER>;
+            key-positions = <34 35>;
+        };
+
+        Backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
+        };
+
+        Escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <2 3>;
+        };
+
+        Tab {
+            bindings = <&kp TAB>;
+            key-positions = <3 4>;
+        };
+
+        Delete {
+            bindings = <&kp DELETE>;
+            key-positions = <9 10>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            display-name = "QWERTY";
+        Noted {
+            display-name = "NOTED";
 
             // --------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |                ↑    |  Y  |  U   |  I  |  O  |  P  | BKSP |      &kp UP_ARROW 
@@ -64,11 +96,11 @@
             //                                                      enter
 
             bindings = <
-&kp TAB    &kp Q  &kp W      &kp E     &kp R  &kp T          &kp UP_ARROW     &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td0       &kp A  &kp S      &kp D     &kp F  &kp G          &kp DOWN_ARROW   &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &kp B          &kp LEFT_ARROW   &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                  &kp SPACE  &kp LGUI  &mo 1  &lt 3 SPACE    &kp RIGHT_ARROW  &lt 3 ENTER  &mo 2  &kp RALT
-                                                             &kp ENTER
+&kp J  &kp Z  &kp Y             &kp U      &kp A           &kp Q        &kp UP_ARROW     &kp P  &kp B      &kp M      &kp L    &kp F  &kp RA(S)
+&td0   &kp C  &kp S             &kp I      &kp E           &kp O        &kp DOWN_ARROW   &kp D  &kp T      &kp N      &kp R    &kp H  &none
+&none  &kp V  &kp X             &kp RA(U)  &kp RA(A)       &kp RA(O)    &kp LEFT_ARROW   &kp W  &kp G      &kp COMMA  &kp DOT  &kp K  &none
+              &kp K_PLAY_PAUSE  &none      &kp LEFT_SHIFT  &none        &kp RIGHT_ARROW  &mo 3  &kp SPACE  &mo 1
+                                                                        &kp ENTER
             >;
 
             label = "QWERTY";
@@ -85,18 +117,18 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&studio_unlock   &kp N1           &kp N2          &kp N3        &kp N4        &kp N5             &mmv MOVE_UP     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &mmv MOVE_DOWN   &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF    &mmv MOVE_LEFT   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                         &kp C_MUTE      &trans        &trans        &trans             &mmv MOVE_RIGHT  &kp INS          &kp DEL          &trans
-                                                                                        &mkp LCLK
+&studio_unlock  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5             &mmv MOVE_UP     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
+&trans          &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &mmv MOVE_DOWN   &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
+&trans          &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF    &mmv MOVE_LEFT   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
+                                 &kp C_MUTE      &trans        &trans        &trans             &mmv MOVE_RIGHT  &kp INS          &kp DEL          &trans
+                                                                                                &mkp LCLK
             >;
 
             label = "NUMBER";
             sensor-bindings = <&scroll_encoder>;
         };
 
-        raise_layer {
+        Symbol {
             display-name = "SYMBOL";
 
             // -----------------------------------------------------------------------------------------
