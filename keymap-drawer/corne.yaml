@@ -1,53 +1,53 @@
 layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
 layers:
   QWERTY:
-  - $$mdi:keyboard-tab$$
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - $$mdi:arrow-up-bold$$
+  - J
+  - Z
   - Y
   - U
-  - I
-  - O
-  - P
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - '&td0'
   - A
-  - S
-  - D
-  - F
-  - G
-  - $$mdi:arrow-down-bold$$
-  - H
-  - J
-  - K
-  - L
-  - {t: ;, s: ':'}
-  - {t: '''', s: '"'}
-  - $$mdi:apple-keyboard-control$$
-  - Z
-  - X
-  - C
-  - V
+  - Q
+  - $$mdi:arrow-up-bold$$
+  - P
   - B
-  - $$mdi:arrow-left-bold$$
-  - N
   - M
+  - L
+  - F
+  - AltGr+S
+  - '&td0'
+  - C
+  - S
+  - I
+  - E
+  - O
+  - $$mdi:arrow-down-bold$$
+  - D
+  - T
+  - N
+  - R
+  - H
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - V
+  - X
+  - AltGr+U
+  - AltGr+A
+  - AltGr+O
+  - $$mdi:arrow-left-bold$$
+  - W
+  - G
   - {t: ',', s: <}
   - {t: ., s: '>'}
-  - {t: /, s: '?'}
-  - $$mdi:keyboard-esc$$
-  - $$mdi:keyboard-space$$
-  - LGUI
-  - NUMBER
-  - {t: '$$mdi:keyboard-space$$', h: FN}
+  - K
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - PLAY PAUSE
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:arrow-right-bold$$
-  - {t: '$$mdi:keyboard-return$$', h: FN}
-  - SYMBOL
-  - $$mdi:apple-keyboard-option$$
+  - FN
+  - $$mdi:keyboard-space$$
+  - NUMBER
   - {t: '$$mdi:keyboard-return$$', type: enter}
   NUMBER:
   - '&studio_unlock'
@@ -91,12 +91,12 @@ layers:
   - PG DN
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - INS
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - $$mdi:mouse-left-click-outline$$
   SYMBOL:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -144,7 +144,7 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-left-click-outline$$
   FN:
@@ -190,9 +190,20 @@ layers:
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - {type: held alternate}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-left-click-outline$$
+combos:
+- p: [34, 35]
+  k: {t: '$$mdi:keyboard-return$$', type: enter}
+- p: [8, 9]
+  k: {t: '$$mdi:backspace$$', type: backspace}
+- p: [2, 3]
+  k: $$mdi:keyboard-esc$$
+- p: [3, 4]
+  k: $$mdi:keyboard-tab$$
+- p: [9, 10]
+  k: $$mdi:backspace-reverse-outline$$
