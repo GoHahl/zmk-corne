@@ -30,9 +30,9 @@ layers:
   - NUMBER
   - V
   - X
-  - AltGr+U
-  - AltGr+A
-  - AltGr+O
+  - Ctl+Alt+U
+  - Alt+Ctl+A
+  - Alt+Ctl+O
   - $$mdi:arrow-left-bold$$
   - W
   - G
