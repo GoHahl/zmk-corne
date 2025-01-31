@@ -124,11 +124,11 @@
             //                                                      enter
 
             bindings = <
-&kp J  &kp Z            &kp Y             &kp U                &kp A              &kp Q         &kp UP_ARROW     &kp P  &kp B               &kp M                 &kp L            &kp F            &kp RA(S)
-&td0   &hml LEFT_GUI C  &hml LEFT_ALT S   &hml LEFT_CONTROL I  &hml LEFT_SHIFT E  &kp O         &kp DOWN_ARROW   &kp D  &hmr RIGHT_SHIFT T  &hmr RIGHT_CONTROL N  &hmr LEFT_ALT R  &hmr LEFT_GUI H  &none
-&mo 1  &kp V            &kp X             &kp RA(U)            &kp RA(A)          &kp RA(O)     &kp LEFT_ARROW   &kp W  &kp G               &kp COMMA             &kp DOT          &kp K            &none
-                        &kp K_PLAY_PAUSE  &mo 4                &kp LEFT_SHIFT     &caps_word    &kp RIGHT_ARROW  &mo 4  &kp SPACE           &mo 1
-                                                                                                &kp ENTER
+&kp J  &kp Z            &kp Y             &kp U                &kp A              &kp Q            &kp UP_ARROW     &kp P  &kp B               &kp M                 &kp L            &kp F            &kp RA(S)
+&td0   &hml LEFT_GUI C  &hml LEFT_ALT S   &hml LEFT_CONTROL I  &hml LEFT_SHIFT E  &kp O            &kp DOWN_ARROW   &kp D  &hmr RIGHT_SHIFT T  &hmr RIGHT_CONTROL N  &hmr LEFT_ALT R  &hmr LEFT_GUI H  &none
+&mo 1  &kp V            &kp X             &kp LC(LA(U))        &kp LA(LC(A))      &kp LA(LC(O))    &kp LEFT_ARROW   &kp W  &kp G               &kp COMMA             &kp DOT          &kp K            &none
+                        &kp K_PLAY_PAUSE  &mo 4                &kp LEFT_SHIFT     &caps_word       &kp RIGHT_ARROW  &mo 4  &kp SPACE           &mo 1
+                                                                                                   &kp ENTER
             >;
 
             label = "QWERTY";
